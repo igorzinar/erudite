@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 export default function ResultModal() {
   return (
@@ -6,13 +6,13 @@ export default function ResultModal() {
       <div className="overlay" />
       <div className="result-modal-content">
         <h3>
-          👊👊👊
+          🎉🎉🎉
           <br />
           YOU WON!
         </h3>
 
         <h3>
-          😟😢😟
+          😥😥😥
           <br />
           YOU LOST!
         </h3>
@@ -26,5 +26,5 @@ export default function ResultModal() {
         <button>Go to next question 👉</button>
       </div>
     </div>
-  );
+  )
 }

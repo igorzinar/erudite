@@ -3,30 +3,45 @@ import Question from './components/Question'
 import CategorySelector from './components/CategorySelector'
 import ResultModal from './components/ResultModal'
 import Scoreboard from './components/Scoreboard'
+import DifficultySelector from './components/DifficultySelector'
 import './App.css'
 
 export default function App() {
   const [question, setQuestion] = useState(null)
+  const [selectedCategory, setSelectedCategory] = useState('any')
+  const [selectedDifficulTyes, setSelectedDifficulTyes] = useState('medium')
   useEffect(() => {
     getQuestion()
-  }, [])
+  }, [selectedCategory, selectedDifficulTyes])
 
   function getQuestion() {
-    const url = 'https://opentdb.com/api.php?amount=1'
+    let url = 'https://opentdb.com/api.php?amount=1'
+    if (selectedCategory !== 'any') url += `&category=${selectedCategory}`
+    if (selectedDifficulTyes !== 'Medium')
+      url += `&difficulty=${selectedDifficulTyes}`
+    console.log(url)
     fetch(url)
       .then((res) => res.json())
       .then((data) => setQuestion(data.results[0]))
   }
-  console.log(question)
+
   return (
     <div className="app">
       {/* show the result modal ----------------------- */}
       {/* <ResultModal /> */}
-
+      <Scoreboard />
       {/* question header ----------------------- */}
       <div className="question-header">
-        <CategorySelector />
-        <Scoreboard />
+        <div className="select-container">
+          <CategorySelector
+            category={selectedCategory}
+            chooseCategory={setSelectedCategory}
+          />
+          <DifficultySelector
+            difficulty={selectedDifficulTyes}
+            chooseDifficulty={setSelectedDifficulTyes}
+          />
+        </div>
       </div>
 
       {/* the question itself ----------------------- */}
@@ -36,7 +51,7 @@ export default function App() {
 
       {/* question footer ----------------------- */}
       <div className="question-footer">
-        <button>Go to next question 👉</button>
+        <button>Go to next question ➽</button>
       </div>
     </div>
   )
