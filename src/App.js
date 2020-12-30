@@ -4,7 +4,6 @@ import CategorySelector from './components/CategorySelector'
 import ResultModal from './components/ResultModal'
 import Scoreboard from './components/Scoreboard'
 import './App.css'
-import axios from 'axios'
 
 export default function App() {
   const [question, setQuestion] = useState(null)

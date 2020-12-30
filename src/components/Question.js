@@ -1,9 +1,13 @@
 import React from 'react'
+import shuffle from 'lodash.shuffle'
 
 const sampleAnswers = ['One', 'Two', 'Three', 'Four']
 
 export default function Question({ question }) {
-  const answers = [...question.incorrect_answers, question.incorrect_answers]
+  const answers = shuffle([
+    ...question.incorrect_answers,
+    question.correct_answer,
+  ])
   return (
     <div className="question">
       <h2 dangerouslySetInnerHTML={{ __html: question.question }} />
