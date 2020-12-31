@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/question-game/static/css/main.e72281b1.chunk.css",
+    "main.js": "/question-game/static/js/main.3c354a01.chunk.js",
+    "main.js.map": "/question-game/static/js/main.3c354a01.chunk.js.map",
+    "runtime-main.js": "/question-game/static/js/runtime-main.d1eae157.js",
+    "runtime-main.js.map": "/question-game/static/js/runtime-main.d1eae157.js.map",
+    "static/js/2.a444b010.chunk.js": "/question-game/static/js/2.a444b010.chunk.js",
+    "static/js/2.a444b010.chunk.js.map": "/question-game/static/js/2.a444b010.chunk.js.map",
+    "index.html": "/question-game/index.html",
+    "static/css/main.e72281b1.chunk.css.map": "/question-game/static/css/main.e72281b1.chunk.css.map",
+    "static/js/2.a444b010.chunk.js.LICENSE.txt": "/question-game/static/js/2.a444b010.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/question-game/static/media/background-image.25be8440.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d1eae157.js",
+    "static/js/2.a444b010.chunk.js",
+    "static/css/main.e72281b1.chunk.css",
+    "static/js/main.3c354a01.chunk.js"
+  ]
+}
